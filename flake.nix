@@ -51,6 +51,7 @@
         ./flake-modules/deployment.nix
         ./flake-modules/vm-images.nix
         ./flake-modules/disko.nix
+        ./flake-modules/apps.nix
       ];
       flake = {
         lib = import ./lib {
