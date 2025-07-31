@@ -50,6 +50,7 @@
         ./flake-modules/checks.nix
         ./flake-modules/deployment.nix
         ./flake-modules/vm-images.nix
+        ./flake-modules/disko.nix
       ];
       flake = {
         lib = import ./lib {

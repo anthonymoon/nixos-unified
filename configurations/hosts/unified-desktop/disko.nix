@@ -1,9 +1,15 @@
+{ lib, ... }:
+
+let
+  # This allows the disk device to be passed as an argument.
+  diskDevice = lib.mkDefault "/dev/disk/by-id/nvme-CT2000T500SSD8_241047B9A4C2";
+in
 {
   disko.devices = {
     disk = {
       main = {
         type = "disk";
-                device = config.system.diskDevice;
+        device = diskDevice;
         content = {
           type = "gpt";
           partitions = {
